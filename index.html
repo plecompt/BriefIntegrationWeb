@@ -8,18 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="assets/icon-titre-header.png" alt="logo nike"></a>
-        <a href="#ventes">Meilleures ventes</a>
-        <a href="#collections">Nouvelles collections</a>
-        <img src="assets/icon-search-nav.png" alt="icone de recherche">
-        <img src="assets/icon-panier-nav.png" alt="icone du panier">
+    <header class="flex">
+        <div class="left flex">
+            <a href="index.html"><img src="assets/icon-titre-header.png" alt="logo nike"></a>
+        </div>
+        <div class="right flex">
+            <a href="#ventes">Meilleures ventes</a>
+            <a href="#collections">Nouvelles collections</a>
+            <img src="assets/icon-search-nav.png" alt="icone de recherche">
+            <img src="assets/icon-panier-nav.png" alt="icone du panier">
+        </div>
     </header>
     <main>
         <section id="acceuil">
             <div class="left">
                 <h1>NIKE</h1>
-                <h3>NikePlus Membership</h2>
+                <h3><span class="bold-word">NikePlus</span> Membership</h3>
                 <p>Rejoignez la plus grande équipe sportive pour profiter du meilleur de Nike.</p>
                 <button class="button">Nous rejoindre</button>
             </div>
@@ -38,80 +42,86 @@
             </div>
         </section>
         <section id="ventes">
-            <hr class="rose">
+            <hr class="hrRose">
             <h2>Meilleures Ventes</h2>
-            <div class="containerArticles">
+            <div class="containerArticles flex">
                 <div class="article">
                     <img src="assets/img-ventes-lakers.png" alt="Deux personnes avec un shirt lakers">
-                    <p class="articlename">Lebron James Lakers</p>
-                    <p class="description">Maillot Nike NBA</p>
-                    <p>1 joueur disponible</p>
-                    <p>90€</p>
+                    <div class="content">
+                        <p class="articlename">Lebron James Lakers</p>
+                        <p class="description">Maillot Nike NBA</p>
+                        <p class="soustexte">1 joueur disponible</p>
+                        <p class="prix">90€</p>
+                    </div>
                 </div>
                 <div class="article">
                     <img src="assets/img-ventes-man.png" alt="Homme portant un haut de running noir">
-                    <p class="articlename">Nike Drit-FIT Miler</p>
-                    <p class="description">Haut de running</p>
-                    <p>1 couleur</p>
-                    <p>30€</p>
+                    <div class="content">
+                        <p class="articlename">Nike Drit-FIT Miler</p>
+                        <p class="description">Haut de running</p>
+                        <p class="soustexte">1 couleur</p>
+                        <p class="prix">30€</p>
+                    </div>
                 </div>
                 <div class="article">
                     <img src="assets/img-ventes-woman.png" alt="Femme portant un haut à manches courtes">
-                    <p class="articlename">Nike Sportswear</p>
-                    <p class="description">Haut à manches courtes</p>
-                    <p>1 couleur</p>
-                    <p>40€</p>
+                    <div class="content">
+                        <p class="articlename">Nike Sportswear</p>
+                        <p class="description">Haut à manches courtes</p>
+                        <p class="soustexte">1 couleur</p>
+                        <p class="prix">40€</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="collections">
-            <hr class="rose">
-        <h2>Nouvelles collections</h2>
-        <div class="containercollection">
-            <div class="image-container1">
-                <img src="assets/img-gallerie-pink.png" alt="Femme portant un haut rose">
-                <button class="button">Voir</button>
+            <hr class="hrRose">
+            <h2>Nouvelles collections</h2>
+            <div class="containercollection grid">
+                <div class="image-container">
+                    <img src="assets/img-gallerie-pink.png" alt="Femme portant un haut rose">
+                    <button class="button">Voir</button>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img-gallerie-jorja.png" alt="Femme avec un manteau blanc">
+                    <button class="button">Voir</button>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img-gallerie-street.png" alt="Femme dans la rue avec un shirt Nike">
+                    <button class="button">Voir</button>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img-gallerie-kid-1.png" alt="Enfant avec un shirt rouge">
+                    <button class="button">Voir</button>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img-gallerie-man.png" alt="Homme tenant une chaussure">
+                    <button class="button">Voir</button>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img-gallerie-group.png" alt="Groupe de gens bizarres">
+                    <button class="button">Voir</button>
+                </div>
             </div>
-            <div class="image-container2">
-                <img src="assets/img-gallerie-jorja.png" alt="Femme avec un manteau blanc">
-                <button class="button">Voir</button>
-            </div>
-            <div class="image-container3">
-                <img src="assets/img-gallerie-street.png" alt="Femme dans la rue avec un shirt Nike">
-                <button class="button">Voir</button>
-            </div>
-            <div class="image-container4">
-                <img src="assets/img-gallerie-kid.png" alt="Enfant avec un shirt rouge">
-                <button class="button">Voir</button>
-            </div>
-            <div class="image-container5">
-                <img src="assets/img-gallerie-man.png" alt="Homme tenant une chaussure">
-                <button class="button">Voir</button>
-            </div>
-            <div class="image-container6">
-                <img src="assets/img-gallerie-group.png" alt="Groupe de gens bizarres">
-                <button class="button">Voir</button>
-            </div>
-        </div>
         </section>
     </main>
     <footer>
-        <hr class="rose">
+        <hr class="hrRose" long="1">
         <!-- devrait etre des <a>, mais <li> pour l'exercice -->
         <div class="ulContainer">
             <div class="column">
                 <ul>
-                    <li>CARTES CADEAUX</li>
-                    <li>TROUVER UN MAGASIN</li>
-                    <li>S'INSCRIRE AUX E-MAILS</li>
-                    <li>DEVENIR MEMBRE</li>
-                    <li>RÉDUCTION POUR ÉTUDIANTS</li>
-                    <li>COMMENTAIRE SUR LE SITE</li>
+                    <li class="bold-word" weight="600">CARTES CADEAUX</li>
+                    <li class="bold-word" weight="600">TROUVER UN MAGASIN</li>
+                    <li class="bold-word" weight="600">S'INSCRIRE AUX E-MAILS</li>
+                    <li class="bold-word" weight="600">DEVENIR MEMBRE</li>
+                    <li class="bold-word" weight="600">RÉDUCTION POUR ÉTUDIANTS</li>
+                    <li class="bold-word" weight="600">COMMENTAIRE SUR LE SITE</li>
                 </ul>
             </div>
             <div class="column">
                 <ul>
-                    <li>AIDE</li>
+                    <li class="bold-word" weight="600">AIDE</li>
                     <li>Statut de commande</li>
                     <li>Expédition et livraison</li>
                     <li>Retours</li>
@@ -121,7 +131,7 @@
             </div>
             <div class="column">
                 <ul>
-                    <li>À PROPOS DE NIKE</li>
+                    <li class="bold-word" weight="600">À PROPOS DE NIKE</li>
                     <li>Actualités</li>
                     <li>Carrières</li>
                     <li>Investisseurs</li>
@@ -129,12 +139,16 @@
                 </ul>
             </div>
         </div>
-        <hr>
-        <div class="copyrights">
-            <h2>©2020 Nike. Inc. tous droits réservés</h2>
-            <img src="assets/ant-design_facebook-filled.png" alt="Icone facebook">
-            <img src="assets/ant-design_instagram-filled.png" alt="Icone instagram">
-            <img src="assets/ant-design_twitter-outlined.png" alt="Icone Twitter">
+        <hr class="vanillaHR">
+        <div class="copyrights flex">
+            <div class="left flex">
+                <span>©2020 Nike. Inc. tous droits réservés<span>
+            </div>
+            <div class="right flex">
+                <img src="assets/ant-design_facebook-filled.png" alt="Icone facebook">
+                <img src="assets/ant-design_instagram-filled.png" alt="Icone instagram">
+                <img src="assets/ant-design_twitter-outlined.png" alt="Icone Twitter">
+            </div>
         </div>
     </footer>
 </body>
