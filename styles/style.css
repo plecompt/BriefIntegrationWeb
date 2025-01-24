@@ -12,7 +12,6 @@ body {
 }
 
 section, footer{
-    border: 2px solid red;
     margin-bottom: 5vh;
 }
 
@@ -124,13 +123,14 @@ img:hover{
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    border: 2px solid red;
 }
 
 .buttonJoin{
     background-color: #EF32D9;
     font-size: 18px;
     font-weight: 700;
+    max-width: 200px;
+    height: 50px;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -270,4 +270,79 @@ li {
 .copyrights
 {
     width: 100%;
+}
+
+@media (max-width: 1200px) /* de +inf jusqu'a 1200px */
+{
+
+}
+
+@media (max-width: 850px) /* de +inf jusqu'a 850px */
+{
+    h2{
+        margin-bottom: 5vh;
+    }
+
+    /* header */
+    header{
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    header .right{
+        flex-direction: column;
+    }
+
+    /* Section 1 */
+    #acceuil .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+    
+    .homeArticles{
+        display: none;
+    }
+    
+    .imgBackground{
+        display: none;
+    }
+    
+    .homeText{
+        align-items: center;
+    }
+    
+    .homeImage img{
+        height: auto;
+        width: 80vw;
+    }
+    
+    .homeSocial{
+        display: none;
+    }
+
+    /* Section 2 */
+
+    .containerArticles{
+        flex-direction: column;
+    }
+
+    /* Section 3 */
+
+    .containercollection{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .ulContainer{
+        flex-direction: column;
+        justify-content: left;
+        gap: 10px;
+    }
+    .copyrights
+    {
+        flex-direction: column;
+        justify-content: left;
+        gap: 5vh;
+    }
 }
