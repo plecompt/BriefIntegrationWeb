@@ -67,6 +67,11 @@ h3{
     font-weight: 700;
 }
 
+.membership{
+    font-size: 24px;
+    font-weight: 400;
+}
+
 [long="1"] {--size: 543px;}
 .hrRose{
     border: none;
@@ -75,22 +80,11 @@ h3{
     background-color: #EF32D9;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 5px;
-}
-
 img:hover{
     filter: brightness(50%);
 }
 
 /* Header */
-
-header{
-    border: 2px red solid;
-}
 
 .left{
     font-size: 14px;
@@ -105,7 +99,60 @@ header{
 
 /* Section 1 */
 
+#acceuil{
+    position: relative;
+}
 
+#acceuil .container{
+    flex-direction: row;
+}
+
+.homeText{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.homeImage{
+    display: flex;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+.homeSocial{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    border: 2px solid red;
+}
+
+.buttonJoin{
+    background-color: #EF32D9;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.homeArticles{
+    display: flex;
+    position: absolute;
+    gap: 5px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.imgBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(50% 50% at 50% 50%, #44464B 0%, #28292F 100%);
+    border: 1px solid white
+}
 
 
 /* Section 2 */
@@ -116,12 +163,20 @@ header{
 }
 
 .article .prix{
-    position: absolute; /* Positionnement absolu dans le conteneur */
-    bottom: 25px; /* Distance du haut */
-    right: 10px; /* Distance de la droite */
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
 }
 
 /* Section 3 */
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
 
 #collections{
     padding-right: 5vw;
