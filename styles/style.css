@@ -159,8 +159,8 @@ button:hover, img:hover{
 
 .article img{
     object-fit: cover;
-    height: auto;
-    width: auto;
+    /* height: auto;
+    width: auto; */
 }
 
 /* Section 3 */
@@ -262,13 +262,6 @@ li {
 
 .copyrights {
     width: 100%;
-}
-
-@media (max-width: 1300px) /* de +inf jusqu'a 1300px */
-{
-    /* .containerArticles{
-        flex-direction: column;
-    } */
 }
 
 @media (max-width: 850px) /* de +inf jusqu'a 850px */
