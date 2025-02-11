@@ -26,7 +26,7 @@ h1, h2, .articlename {
 }
 
 h1{
-    font-size:161px;
+    font-size: 161px;
     font-weight: 800;
 }
 
@@ -41,34 +41,13 @@ h3{
     font-weight: 300;
 }
 
-[weight=600]{--weight: 600px;}
 .bold-word{
-    font-weight: var(--weight, 800);
+    font-weight: var(--fontWeight);
 }
 
-.articlename{
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.description{
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.sous-texte{
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.prix{
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.membership{
-    font-size: 24px;
-    font-weight: 400;
+.fontSizeAndWeight{
+    font-size: var(--fontSize);
+    font-weight: var(--fontWeight);
 }
 
 [long="1"] {--size: 543px;}
@@ -83,18 +62,22 @@ img:hover{
     filter: brightness(50%);
 }
 
+button:hover, img:hover{
+    cursor: pointer;
+}
+
 /* Header */
 
 .left{
     font-size: 14px;
 }
+
 .right{
     gap: 2%;
     flex: 1;
     white-space: nowrap;
     justify-content: flex-end;
 }
-
 
 /* Section 1 */
 
@@ -104,6 +87,10 @@ img:hover{
 
 #acceuil .container{
     flex-direction: row;
+}
+
+#acceuil .container{
+    flex-wrap: wrap;
 }
 
 .homeText{
@@ -154,7 +141,6 @@ img:hover{
     border: 1px solid white
 }
 
-
 /* Section 2 */
 
 .containerArticles .article{
@@ -167,14 +153,22 @@ img:hover{
     bottom: 25px;
     right: 10px;
 }
+.containerArticles{
+    flex-wrap: wrap;
+}
+
+.article img{
+    object-fit: cover;
+    height: auto;
+    width: auto;
+}
 
 /* Section 3 */
 
-
 .grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: repeat(100, 1fr);
     gap: 5px;
 }
 
@@ -206,37 +200,36 @@ img:hover{
     width: 68px;
     border: none;
     border-radius: 36px;
-    cursor: pointer;
 }
 
 .image-container:nth-of-type(1){
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
+    grid-column: 1 / 45;
+    grid-row: 1 / 70;
 }
 
 .image-container:nth-of-type(2){
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-column: 45 / 75;
+    grid-row: 1 / 33;
 }
 
 .image-container:nth-of-type(3){
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
+    grid-column: 75 / 100;
+    grid-row: 1 / 100;
 }
 
 .image-container:nth-of-type(4){
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-column: 45 / 75;
+    grid-row: 33 / 70;
 }
 
 .image-container:nth-of-type(5){
-    grid-column: 2 / 4;
-    grid-row: 3/ 4;
+    grid-column: 33 / 75;
+    grid-row: 70 / 100;
 }
 
 .image-container:nth-of-type(6){
-    grid-column: 4 / 5;
-    grid-row: 1 / 4;
+    grid-column: 1 / 33;
+    grid-row: 70 / 100;
 }
 
 /* Footer */
@@ -267,28 +260,28 @@ li {
     width: 100%;
 }
 
-.copyrights
-{
+.copyrights {
     width: 100%;
 }
 
-@media (max-width: 1200px) /* de +inf jusqu'a 1200px */
+@media (max-width: 1300px) /* de +inf jusqu'a 1300px */
 {
-
+    /* .containerArticles{
+        flex-direction: column;
+    } */
 }
 
 @media (max-width: 850px) /* de +inf jusqu'a 850px */
 {
     h2{
         margin-bottom: 5vh;
+        font-size: 35px;
+        font-weight: 500;
     }
 
     /* header */
-    header{
-        justify-content: space-between;
-        align-items: flex-end;
-    }
     header .right{
+        flex-grow: 0;
         flex-direction: column;
     }
 
@@ -299,11 +292,7 @@ li {
         gap: 5vh;
     }
     
-    .homeArticles{
-        display: none;
-    }
-    
-    .imgBackground{
+    .homeArticles, .imgBackground, .homeSocial{
         display: none;
     }
     
@@ -314,10 +303,6 @@ li {
     .homeImage img{
         height: auto;
         width: 80vw;
-    }
-    
-    .homeSocial{
-        display: none;
     }
 
     /* Section 2 */
@@ -333,16 +318,23 @@ li {
         flex-direction: column;
     }
 
+    .image-container button{
+        left: 10px;
+    }
+
     /* Footer */
-    .ulContainer{
+    .ulContainer, .copyrights{
         flex-direction: column;
         justify-content: left;
         gap: 10px;
     }
-    .copyrights
-    {
-        flex-direction: column;
-        justify-content: left;
+
+    .copyrights {
         gap: 5vh;
+    }
+    
+    .copyrights .right {
+        width: 50%;
+        justify-content: space-evenly;
     }
 }
