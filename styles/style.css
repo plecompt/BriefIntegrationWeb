@@ -41,8 +41,8 @@ h3{
     font-weight: 300;
 }
 
-.bold-word{
-    font-weight: var(--fontWeight);
+a {
+    text-decoration: none;
 }
 
 .fontSizeAndWeight{
@@ -73,8 +73,8 @@ button:hover, img:hover{
 }
 
 .right{
-    gap: 2%;
-    flex: 1;
+    gap: 10px;
+    flex-grow: 1;
     white-space: nowrap;
     justify-content: flex-end;
 }
@@ -87,9 +87,6 @@ button:hover, img:hover{
 
 #acceuil .container{
     flex-direction: row;
-}
-
-#acceuil .container{
     flex-wrap: wrap;
 }
 
@@ -159,8 +156,6 @@ button:hover, img:hover{
 
 .article img{
     object-fit: cover;
-    /* height: auto;
-    width: auto; */
 }
 
 /* Section 3 */
